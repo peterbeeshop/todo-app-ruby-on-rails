@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Todos</h1>
+
+<div id="todos">
+  <% @todos.each do |todo| %>
+
+  <div class="card my-4">
+    <h5 class="card-header"></h5>
+    <div class="card-body">
+      <h2 class="card-title">Title: <%= todo.title %></h2>
+      <h4 class="card-text">Description: <%= todo.description %></h4>
+      <p><%= link_to "Show todo", todo, class: "btn btn-primary" %></p>
+    </div>
+  </div>
+
+  <% end %>
+</div>
+
+<%= link_to "New todo", new_todo_path, class: "mt-5 btn btn-danger"%>
